@@ -26,6 +26,14 @@
             android:screenOrientation="landscape">
         </activity>
 
+        <activity android:name=".ScoreActivity"
+            android:screenOrientation="landscape">
+        </activity>
+
+        <activity android:name=".CreditActivity"
+            android:screenOrientation="landscape">
+        </activity>
+
     </application>
 
 </manifest>

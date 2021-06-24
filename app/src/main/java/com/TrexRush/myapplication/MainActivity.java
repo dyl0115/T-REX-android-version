@@ -29,11 +29,16 @@ public class MainActivity extends AppCompatActivity {
     public void btn_board_click(View view) {
         Toast myToast = Toast.makeText(this.getApplicationContext(),"Score Board Clicked!", Toast.LENGTH_SHORT);
         myToast.show();
+        Intent score_intent=new Intent(getApplicationContext(),ScoreActivity.class);
+        startActivity(score_intent);
+
     }
 
     public void btn_credit_click(View view) {
         Toast myToast = Toast.makeText(this.getApplicationContext(),"Credit Clicked!", Toast.LENGTH_SHORT);
         myToast.show();
+        Intent credit_intent=new Intent(getApplicationContext(),CreditActivity.class);
+        startActivity(credit_intent);
     }
 
     public void btn_introdino_click(View view) {
