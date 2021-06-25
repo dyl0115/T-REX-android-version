@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     public void btn_start_click(View view) {
         Toast myToast = Toast.makeText(this.getApplicationContext(),"Game Start Clicked!", Toast.LENGTH_SHORT);
         myToast.show();
-        Intent start_intent=new Intent(getApplicationContext(),GameActivity.class);
+        Intent start_intent=new Intent(getApplicationContext(), GameActivity.class);
         startActivity(start_intent);
     }
 

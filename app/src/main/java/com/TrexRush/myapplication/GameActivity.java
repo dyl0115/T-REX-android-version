@@ -1,14 +1,33 @@
 package com.TrexRush.myapplication;
 
+import android.graphics.Point;
 import android.os.Bundle;
+import android.view.Display;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class GameActivity extends AppCompatActivity {
+    SpaceInvaderView spaceInvaderView;
+
     @Override
-    protected void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.game_activity);
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        spaceInvaderView = new SpaceInvaderView(this, size.x, size.y);
+        setContentView(spaceInvaderView);
+
+    }
+
+    protected void onResume(){
+        super.onResume();
+        spaceInvaderView.resume();
+    }
+
+    protected void onPause(){
+        super.onPause();
+        spaceInvaderView.pause();
     }
 }
