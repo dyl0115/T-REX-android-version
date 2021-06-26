@@ -58,6 +58,12 @@ public class Sprite {
         rect.bottom = y + height;
     }
 
+    public void jump(){
+        y += dy;
+        rect.top = y;
+        rect.bottom = y +height;
+    }
+
     public void setDx(int dx){
         this.dx = dx;
     }
