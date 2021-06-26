@@ -8,7 +8,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class GameActivity extends AppCompatActivity {
-    SpaceInvaderView spaceInvaderView;
+//    SpaceInvaderView spaceInvaderView;
+    FieldView fieldView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,18 +17,24 @@ public class GameActivity extends AppCompatActivity {
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
-        spaceInvaderView = new SpaceInvaderView(this, size.x, size.y);
-        setContentView(spaceInvaderView);
+
+        fieldView = new FieldView(this, size.x, size.y);
+        setContentView(fieldView);
+//        spaceInvaderView = new SpaceInvaderView(this, size.x, size.y);
+//        setContentView(spaceInvaderView);
 
     }
 
     protected void onResume(){
         super.onResume();
-        spaceInvaderView.resume();
+        fieldView.resume();
+//        spaceInvaderView.resume();
     }
+
 
     protected void onPause(){
         super.onPause();
-        spaceInvaderView.pause();
+        fieldView.pause();
+//        spaceInvaderView.pause();
     }
 }
